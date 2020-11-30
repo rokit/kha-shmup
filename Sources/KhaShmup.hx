@@ -22,6 +22,10 @@ class KhaShmup {
 		ship = new Ship(Std.int(screenWidth / 2) - Std.int(shipImg.width / 2), Std.int(screenHeight / 2) - Std.int(shipImg.height / 2), shipImg);
 	}
 
+	public function tick() {
+		ship.tick();
+	}
+
 	public function render(framebuffer:Framebuffer):Void {
 		var g = backbuffer.g2;
 

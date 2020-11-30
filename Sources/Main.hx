@@ -18,7 +18,7 @@ class Main {
 				// Avoid passing update/render directly,
 				// so replacing them via code injection works
 				Scheduler.addTimeTask(function() {
-					update();
+					game.tick();
 				}, 0, 1 / 60);
 				System.notifyOnFrames(function(framebuffers) game.render(framebuffers[0]));
 			});
